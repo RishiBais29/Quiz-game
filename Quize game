@@ -1,0 +1,64 @@
+print("Welcome to the quiz game!")
+print("NOTE: if your spelling is incorrect then it is considered as wrong answer")
+
+score = 0
+question_no = 0
+
+playing = input("Do you want to play? ").lower()
+
+if playing == "yes":
+    question_no += 1
+    ques = input(f"\n{question_no}. What does CPU stand for? ").lower()
+    if ques == "central processing unit":
+        score += 1
+        print("Correct! You got 1 point.")
+    else:
+        print("Incorrect!")
+        print(f"Current answer is --> central processing unit")
+
+    question_no += 1
+    ques = input(f"\n{question_no}. What does GPU stand for? ").lower()
+    if ques == "graphics processing unit":
+        score += 1
+        print("Correct! You got 1 point.")
+    else:
+        print("Incorrect!")
+        print(f"Current answer is --> graphics processing unit")
+
+    question_no += 1
+    ques = input(f"\n{question_no}. What does RAM stand for? ").lower()
+    if ques == "random access memory":
+        score += 1
+        print("Correct! You got 1 point.")
+    else:
+        print("Incorrect!")
+        print(f"Current answer is --> random access memory")
+
+    question_no += 1
+    ques = input(f"\n{question_no}. What does PSU stand for? ").lower()
+    if ques == "power supply unit":
+        score += 1
+        print("Correct! You got 1 point.")
+    else:
+        print("Incorrect!")
+        print(f"Current answer is --> power supply unit")
+
+    question_no += 1
+    ques = input(f"\n{question_no}. What does ROM stand for? ").lower()
+    if ques == "read only memory":
+        score += 1
+        print("Correct! You got 1 point.")
+    else:
+        print("Incorrect!")
+        print(f"Current answer is --> read only memory")
+
+    print(f"\nNumber of questions is {question_no}")
+    print(f"Your score is {score}")
+    try:
+        percentage = (score * 100) / question_no
+    except ZeroDivisionError:
+        print("0% questions are correct")
+    else:
+        print(f"{percentage}% questions are correct.")
+else:
+    print("Thank you for playing!")
